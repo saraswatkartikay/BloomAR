@@ -1,0 +1,44 @@
+{
+  "filters": [
+    {
+      "id": "bloom",
+      "name": "Bloom AR",
+      "description": "Grow a magical garden from your hands.",
+      "status": "active"
+    },
+    {
+      "id": "galaxy",
+      "name": "Galaxy Hands",
+      "description": "A future cosmic AR effect.",
+      "status": "coming-soon"
+    },
+    {
+      "id": "lightning",
+      "name": "Lightning",
+      "description": "A future energy AR effect.",
+      "status": "coming-soon"
+    },
+    {
+      "id": "butterfly",
+      "name": "Butterfly Garden",
+      "description": "A future interactive butterfly effect.",
+      "status": "coming-soon"
+    }
+  ],
+  "comments": [
+    {
+      "id": "demo-1",
+      "name": "AR Explorer",
+      "text": "The bloom animation is crazy 🔥",
+      "likes": 3,
+      "createdAt": "2026-09-16T10:00:00.000Z"
+    },
+    {
+      "id": "demo-2",
+      "name": "Creative Lab",
+      "text": "Need a galaxy filter next!",
+      "likes": 5,
+      "createdAt": "2026-09-16T11:00:00.000Z"
+    }
+  ]
+}
