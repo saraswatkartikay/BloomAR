@@ -1,25 +1,39 @@
+const TAU = Math.PI * 2;
+
 export class GalaxyEffect {
   constructor() {
     this.time = 0;
     this.hands = [];
+    this.stars = [];
   }
 
   async initialize() {
     this.time = 0;
     this.hands = [];
+
+    this.stars = [];
+
+    for (let i = 0; i < 140; i++) {
+      this.stars.push({
+        angle: Math.random() * TAU,
+        radius: 25 + Math.random() * 150,
+        speed: 0.2 + Math.random() * 0.8,
+        size: 1 + Math.random() * 2,
+        alpha: 0.35 + Math.random() * 0.6
+      });
+    }
   }
 
   reset() {
     this.time = 0;
-    this.hands = [];
   }
 
-  update(hands, gesture, dt, ctx) {
+  update({ hands, dt }) {
     this.time += dt || 0.016;
     this.hands = hands || [];
   }
 
-  render(ctx) {
+  render({ ctx }) {
     if (!ctx) return;
 
     const w = ctx.canvas.width;
@@ -27,54 +41,60 @@ export class GalaxyEffect {
 
     ctx.save();
 
-    // Default center
-    let cx = w / 2;
-    let cy = h / 2;
+    for (const hand of this.hands) {
+      const palm = hand[9];
 
-    // Follow first detected hand
-    if (this.hands.length > 0) {
-      const hand = this.hands[0];
+      if (!palm) continue;
 
-      // MediaPipe hand landmarks
-      const point = hand[9] || hand[0];
+      const cx = (1 - palm.x) * w;
+      const cy = palm.y * h;
 
-      if (point) {
-        cx = point.x * w;
-        cy = point.y * h;
+      for (const star of this.stars) {
+        const angle =
+          star.angle +
+          this.time * star.speed;
+
+        const radius =
+          star.radius +
+          Math.sin(this.time * 2 + star.angle) * 8;
+
+        const x =
+          cx + Math.cos(angle) * radius;
+
+        const y =
+          cy + Math.sin(angle) * radius * 0.65;
+
+        ctx.globalAlpha = star.alpha;
+
+        ctx.fillStyle =
+          "rgba(170,130,255,1)";
+
+        ctx.shadowBlur = 8;
+
+        ctx.shadowColor =
+          "rgba(150,100,255,.8)";
+
+        ctx.beginPath();
+
+        ctx.arc(
+          x,
+          y,
+          star.size,
+          0,
+          TAU
+        );
+
+        ctx.fill();
       }
-    }
-
-    for (let i = 0; i < 100; i++) {
-      const angle = i * 0.45 + this.time * 0.8;
-      const radius = 20 + (i * 11) % 220;
-
-      const x =
-        cx +
-        Math.cos(angle) * radius;
-
-      const y =
-        cy +
-        Math.sin(angle) *
-        radius *
-        0.6;
-
-      const size = 1 + (i % 3);
-
-      ctx.fillStyle = "rgba(150,120,255,0.8)";
-
-      ctx.beginPath();
-      ctx.arc(
-        x,
-        y,
-        size,
-        0,
-        Math.PI * 2
-      );
-      ctx.fill();
     }
 
     ctx.restore();
   }
 
   onGesture() {}
+
+  destroy() {
+    this.hands = [];
+    this.stars = [];
+  }
 }
