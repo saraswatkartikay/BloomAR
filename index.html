@@ -4,181 +4,888 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#09090d">
+
   <title>Bloom AR — Create Something Alive</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JZ3MTE96XB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-JZ3MTE96XB');
-</script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-JZ3MTE96XB');
+  </script>
 </head>
+
 <body>
+
   <div class="noise" aria-hidden="true"></div>
+
+  <!-- HEADER -->
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Bloom AR home"><span class="brand-mark">✦</span><span>Bloom<span class="brand-muted">AR</span></span></a>
+
+    <a class="brand" href="#home" aria-label="Bloom AR home">
+      <span class="brand-mark">✦</span>
+      <span>
+        Bloom<span class="brand-muted">AR</span>
+      </span>
+    </a>
+
     <nav class="nav" aria-label="Main navigation">
-      <a href="#home">Home</a><a href="#studio">Studio</a><a href="#filters">Filters</a><a href="#community">Community</a><a href="#about">About</a>
+      <a href="#home">Home</a>
+      <a href="#studio">Studio</a>
+      <a href="#filters">Filters</a>
+      <a href="#community">Community</a>
+      <a href="#about">About</a>
     </nav>
-    <button class="header-cta" data-scroll="#studio">Try AR <span>↗</span></button>
+
+    <button class="header-cta" data-scroll="#studio">
+      Try AR <span>↗</span>
+    </button>
+
   </header>
 
+
   <main>
+
+    <!-- HERO -->
     <section id="home" class="hero section">
+
       <div class="hero-copy">
-        <div class="eyebrow"><span class="pulse-dot"></span> Browser-based creative AR</div>
-        <h1>Create<br><em>something alive.</em></h1>
-        <p>Turn your hands into a living canvas. Grow, shape and play with real-time visual effects directly in your browser.</p>
+
+        <div class="eyebrow">
+          <span class="pulse-dot"></span>
+          Browser-based creative AR
+        </div>
+
+        <h1>
+          Create<br>
+          <em>something alive.</em>
+        </h1>
+
+        <p>
+          Turn your hands into a living canvas. Grow, shape and play with
+          real-time visual effects directly in your browser.
+        </p>
+
         <div class="hero-actions">
-          <button class="primary-btn" data-scroll="#studio">Enter the Studio <span>→</span></button>
-          <button class="ghost-btn" data-scroll="#filters">Explore filters</button>
+
+          <button class="primary-btn" data-scroll="#studio">
+            Enter the Studio <span>→</span>
+          </button>
+
+          <button class="ghost-btn" data-scroll="#filters">
+            Explore filters
+          </button>
+
         </div>
-        <div class="hero-stats"><div><strong>01</strong><span>Live hand tracking</span></div><div><strong>∞</strong><span>Future effects</span></div><div><strong>0</strong><span>Install required</span></div></div>
+
+        <div class="hero-stats">
+
+          <div>
+            <strong>01</strong>
+            <span>Live hand tracking</span>
+          </div>
+
+          <div>
+            <strong>∞</strong>
+            <span>Future effects</span>
+          </div>
+
+          <div>
+            <strong>0</strong>
+            <span>Install required</span>
+          </div>
+
+        </div>
+
       </div>
+
+
       <div class="hero-visual">
-        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
-        <div class="floating-card card-top"><span>LIVE</span><b>Hand → Bloom</b></div>
-        <div class="flower-sculpture" aria-hidden="true">
-          <div class="sculpture-stem s1"></div><div class="sculpture-stem s2"></div><div class="sculpture-stem s3"></div>
-          <div class="sculpture-flower f1">✦</div><div class="sculpture-flower f2">✦</div><div class="sculpture-flower f3">✦</div>
+
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+
+        <div class="floating-card card-top">
+          <span>LIVE</span>
+          <b>Hand → Bloom</b>
         </div>
-        <div class="floating-card card-bottom"><span>BUILT FOR THE WEB</span><b>Made to evolve</b></div>
+
+        <div class="flower-sculpture" aria-hidden="true">
+
+          <div class="sculpture-stem s1"></div>
+          <div class="sculpture-stem s2"></div>
+          <div class="sculpture-stem s3"></div>
+
+          <div class="sculpture-flower f1">✦</div>
+          <div class="sculpture-flower f2">✦</div>
+          <div class="sculpture-flower f3">✦</div>
+
+        </div>
+
+        <div class="floating-card card-bottom">
+          <span>BUILT FOR THE WEB</span>
+          <b>Made to evolve</b>
+        </div>
+
       </div>
+
     </section>
 
+
+    <!-- AR STUDIO -->
     <section id="studio" class="section studio-section">
+
       <div class="section-heading">
-        <div><span class="kicker">01 / AR STUDIO</span><h2>Your first living filter.</h2></div>
-        <p>Allow camera access, show your hand, and let Bloom AR build a small garden that follows your movement.</p>
+
+        <div>
+          <span class="kicker">01 / AR STUDIO</span>
+          <h2>Your first living filter.</h2>
+        </div>
+
+        <p>
+          Allow camera access, show your hand, and let Bloom AR build a small
+          garden that follows your movement.
+        </p>
+
       </div>
+
 
       <div class="studio-shell">
+
         <div class="camera-panel">
+
           <div class="camera-stage" id="cameraStage">
+
             <video id="video" autoplay playsinline muted></video>
+
             <canvas id="arCanvas"></canvas>
+
             <div class="stage-vignette"></div>
-            <div class="tracking-badge"><span id="trackingDot"></span><span id="trackingText">Camera idle</span></div>
-            <div class="fps-badge" id="fpsBadge">-- FPS</div>
-            <div class="gesture-chip" id="gestureChip">Waiting for hand</div>
-            <div class="empty-state" id="emptyState">
-              <div class="empty-icon">✦</div><h3>Ready when you are</h3><p>Start the camera, then place one hand inside the frame.</p>
+
+            <div class="tracking-badge">
+              <span id="trackingDot"></span>
+              <span id="trackingText">Camera idle</span>
             </div>
+
+            <div class="fps-badge" id="fpsBadge">
+              -- FPS
+            </div>
+
+            <div class="gesture-chip" id="gestureChip">
+              Waiting for hand
+            </div>
+
+            <div class="empty-state" id="emptyState">
+
+              <div class="empty-icon">✦</div>
+
+              <h3>Ready when you are</h3>
+
+              <p>
+                Start the camera, then place one hand inside the frame.
+              </p>
+
+            </div>
+
           </div>
+
+
           <div class="camera-controls">
-            <button class="primary-btn start-btn" id="startBtn">Start experience <span>→</span></button>
-            <button class="icon-btn" id="resetBtn" title="Reset flowers">↻</button>
-            <button class="icon-btn" id="captureBtn" title="Capture image">◎</button>
-            <button class="icon-btn" id="fullscreenBtn" title="Fullscreen">⛶</button>
+
+            <button class="primary-btn start-btn" id="startBtn">
+              Start experience <span>→</span>
+            </button>
+
+            <button class="icon-btn" id="resetBtn" title="Reset flowers">
+              ↻
+            </button>
+
+            <button class="icon-btn" id="captureBtn" title="Capture image">
+              ◎
+            </button>
+
+            <button class="icon-btn" id="fullscreenBtn" title="Fullscreen">
+              ⛶
+            </button>
+
           </div>
+
         </div>
 
+
+        <!-- SIDEBAR -->
         <aside class="studio-sidebar">
+
           <div class="side-block">
+
             <span class="kicker">ACTIVE FILTER</span>
-            <div class="active-filter"><div class="filter-icon bloom-icon">✿</div><div><strong>Bloom AR</strong><small>Garden in your hands</small></div><span class="active-dot"></span></div>
+
+            <div class="active-filter">
+
+              <div class="filter-icon bloom-icon">
+                ✿
+              </div>
+
+              <div>
+                <strong id="activeFilterName">Bloom AR</strong>
+                <small id="activeFilterDescription">
+                  Garden in your hands
+                </small>
+              </div>
+
+              <span class="active-dot"></span>
+
+            </div>
+
           </div>
+
+
           <div class="side-block">
+
             <span class="kicker">GESTURE GUIDE</span>
-            <div class="gesture-row"><span>✋</span><div><b>Open hand</b><small>Grow & bloom</small></div></div>
-            <div class="gesture-row"><span>🖐</span><div><b>Spread fingers</b><small>More branches</small></div></div>
-            <div class="gesture-row"><span>✊</span><div><b>Close hand</b><small>Flowers become buds</small></div></div>
+
+            <div class="gesture-row">
+
+              <span>✋</span>
+
+              <div>
+                <b>Open hand</b>
+                <small>Grow & bloom</small>
+              </div>
+
+            </div>
+
+
+            <div class="gesture-row">
+
+              <span>🖐</span>
+
+              <div>
+                <b>Spread fingers</b>
+                <small>More branches</small>
+              </div>
+
+            </div>
+
+
+            <div class="gesture-row">
+
+              <span>✊</span>
+
+              <div>
+                <b>Close hand</b>
+                <small>Flowers become buds</small>
+              </div>
+
+            </div>
+
           </div>
+
+
           <div class="side-block">
+
             <span class="kicker">TRACKING</span>
-            <div class="metric"><span>Hands</span><b id="handCount">0</b></div>
-            <div class="metric"><span>Gesture</span><b id="gestureValue">—</b></div>
-            <div class="metric"><span>FPS</span><b id="fpsValue">—</b></div>
+
+            <div class="metric">
+              <span>Hands</span>
+              <b id="handCount">0</b>
+            </div>
+
+            <div class="metric">
+              <span>Gesture</span>
+              <b id="gestureValue">—</b>
+            </div>
+
+            <div class="metric">
+              <span>FPS</span>
+              <b id="fpsValue">—</b>
+            </div>
+
           </div>
-          <div class="tip-card"><span>✦</span><div><b>Try moving slowly</b><p>Smooth hand movement makes the stems feel more natural.</p></div></div>
+
+
+          <div class="tip-card">
+
+            <span>✦</span>
+
+            <div>
+              <b>Try moving slowly</b>
+
+              <p>
+                Smooth hand movement makes the stems feel more natural.
+              </p>
+            </div>
+
+          </div>
+
         </aside>
+
       </div>
+
     </section>
 
+
+    <!-- FILTER LAB -->
     <section id="filters" class="section filters-section">
-      <div class="section-heading centered"><div><span class="kicker">02 / FILTER LAB</span><h2>A universe of effects.</h2></div><p>Bloom is only the beginning. The architecture is designed so new experiences can plug into the same tracking engine.</p></div>
+
+      <div class="section-heading centered">
+
+        <div>
+          <span class="kicker">02 / FILTER LAB</span>
+          <h2>A universe of effects.</h2>
+        </div>
+
+        <p>
+          Bloom is only the beginning. The architecture is designed so new
+          experiences can plug into the same tracking engine.
+        </p>
+
+      </div>
+
+
+      <!-- LIVE FILTERS -->
       <div class="filter-grid">
-        <article class="filter-card featured"><div class="filter-preview preview-bloom"><span>✿</span><i></i><i></i><i></i></div><div class="filter-meta"><div><span class="tag live">LIVE</span><h3>Bloom AR</h3><p>Grow a garden from your hands.</p></div><button class="small-arrow" data-scroll="#studio">↗</button></div></article>
-        <article class="filter-card"><div class="filter-preview preview-galaxy"><span>✦</span><b>GALAXY</b></div><div class="filter-meta"><div><span class="tag">COMING SOON</span><h3>Galaxy Hands</h3><p>Turn gestures into constellations.</p></div><button class="small-arrow disabled">→</button></div></article>
-        <article class="filter-card"><div class="filter-preview preview-lightning"><span>ϟ</span><b>ENERGY</b></div><div class="filter-meta"><div><span class="tag">COMING SOON</span><h3>Pulse</h3><p>Shape electric trails with movement.</p></div><button class="small-arrow disabled">→</button></div></article>
-        <article class="filter-card"><div class="filter-preview preview-butterfly"><span>◈</span><b>GARDEN</b></div><div class="filter-meta"><div><span class="tag">COMING SOON</span><h3>Butterfly Garden</h3><p>Summon a swarm of light.</p></div><button class="small-arrow disabled">→</button></div></article>
-      <!-- Upcoming Filters -->
-<div class="upcoming-filters">
-  <div class="upcoming-title">
-    <span>COMING SOON</span>
-    <h3>Upcoming Filters</h3>
-    <p>New AR effects are on the way.</p>
-  </div>
 
-  <div class="filter-grid">
 
-    <article class="filter-card upcoming-card">
-      <div class="filter-preview">
-        <span>✦</span>
-        <b>NEON GLOW</b>
-      </div>
-      <div class="filter-info">
-        <h3>Neon Glow</h3>
-        <p>Coming Soon</p>
-      </div>
-    </article>
+        <!-- BLOOM -->
+        <article
+          class="filter-card featured"
+          data-effect="bloom"
+        >
 
-    <article class="filter-card upcoming-card">
-      <div class="filter-preview">
-        <span>✦</span>
-        <b>CYBER FACE</b>
-      </div>
-      <div class="filter-info">
-        <h3>Cyber Face</h3>
-        <p>Coming Soon</p>
-      </div>
-    </article>
+          <div class="filter-preview preview-bloom">
 
-    <article class="filter-card upcoming-card">
-      <div class="filter-preview">
-        <span>✦</span>
-        <b>SPACE DUST</b>
-      </div>
-      <div class="filter-info">
-        <h3>Space Dust</h3>
-        <p>Coming Soon</p>
-      </div>
-    </article>
+            <span>✿</span>
 
-  </div>
-</div>
+            <i></i>
+            <i></i>
+            <i></i>
+
+          </div>
+
+
+          <div class="filter-meta">
+
+            <div>
+
+              <span class="tag live">
+                LIVE
+              </span>
+
+              <h3>Bloom AR</h3>
+
+              <p>
+                Grow a garden from your hands.
+              </p>
+
+            </div>
+
+
+            <button
+              class="small-arrow effect-btn"
+              data-effect="bloom"
+              type="button"
+              title="Activate Bloom AR"
+            >
+              ↗
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <!-- GALAXY -->
+        <article
+          class="filter-card"
+          data-effect="galaxy"
+        >
+
+          <div class="filter-preview preview-galaxy">
+
+            <span>✦</span>
+
+            <b>GALAXY</b>
+
+          </div>
+
+
+          <div class="filter-meta">
+
+            <div>
+
+              <span class="tag live">
+                LIVE
+              </span>
+
+              <h3>Galaxy Hands</h3>
+
+              <p>
+                Turn gestures into constellations.
+              </p>
+
+            </div>
+
+
+            <button
+              class="small-arrow effect-btn"
+              data-effect="galaxy"
+              type="button"
+              title="Activate Galaxy Hands"
+            >
+              ↗
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <!-- PULSE -->
+        <article
+          class="filter-card"
+          data-effect="pulse"
+        >
+
+          <div class="filter-preview preview-lightning">
+
+            <span>ϟ</span>
+
+            <b>ENERGY</b>
+
+          </div>
+
+
+          <div class="filter-meta">
+
+            <div>
+
+              <span class="tag live">
+                LIVE
+              </span>
+
+              <h3>Pulse</h3>
+
+              <p>
+                Shape electric trails with movement.
+              </p>
+
+            </div>
+
+
+            <button
+              class="small-arrow effect-btn"
+              data-effect="pulse"
+              type="button"
+              title="Activate Pulse"
+            >
+              ↗
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <!-- BUTTERFLY -->
+        <article
+          class="filter-card"
+          data-effect="butterfly"
+        >
+
+          <div class="filter-preview preview-butterfly">
+
+            <span>◈</span>
+
+            <b>GARDEN</b>
+
+          </div>
+
+
+          <div class="filter-meta">
+
+            <div>
+
+              <span class="tag live">
+                LIVE
+              </span>
+
+              <h3>Butterfly Garden</h3>
+
+              <p>
+                Summon a swarm of light.
+              </p>
+
+            </div>
+
+
+            <button
+              class="small-arrow effect-btn"
+              data-effect="butterfly"
+              type="button"
+              title="Activate Butterfly Garden"
+            >
+              ↗
+            </button>
+
+          </div>
+
+        </article>
+
       </div>
+
+
+      <!-- UPCOMING FILTERS -->
+      <div class="upcoming-filters">
+
+        <div class="upcoming-title">
+
+          <span>COMING SOON</span>
+
+          <h3>Upcoming Filters</h3>
+
+          <p>
+            New AR effects are on the way.
+          </p>
+
+        </div>
+
+
+        <div class="filter-grid">
+
+
+          <!-- NEON GLOW -->
+          <article class="filter-card upcoming-card">
+
+            <div class="filter-preview">
+
+              <span>✦</span>
+
+              <b>NEON GLOW</b>
+
+            </div>
+
+            <div class="filter-info">
+
+              <h3>Neon Glow</h3>
+
+              <p>Coming Soon</p>
+
+            </div>
+
+          </article>
+
+
+          <!-- CYBER FACE -->
+          <article class="filter-card upcoming-card">
+
+            <div class="filter-preview">
+
+              <span>✦</span>
+
+              <b>CYBER FACE</b>
+
+            </div>
+
+            <div class="filter-info">
+
+              <h3>Cyber Face</h3>
+
+              <p>Coming Soon</p>
+
+            </div>
+
+          </article>
+
+
+          <!-- SPACE DUST -->
+          <article class="filter-card upcoming-card">
+
+            <div class="filter-preview">
+
+              <span>✦</span>
+
+              <b>SPACE DUST</b>
+
+            </div>
+
+            <div class="filter-info">
+
+              <h3>Space Dust</h3>
+
+              <p>Coming Soon</p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
     </section>
 
+
+    <!-- COMMUNITY -->
     <section id="community" class="section community-section">
-      <div class="community-intro"><span class="kicker">03 / COMMUNITY</span><h2>Made to be played with.</h2><p>Leave a thought, request the next filter, or tell us what you want to see grow.</p><div class="community-count"><b id="commentCount">0</b><span>notes in this browser</span></div></div>
-      <div class="comments-panel">
-        <div class="comment-feed" id="commentFeed"></div>
-        <form id="commentForm" class="comment-form">
-          <div class="form-row"><input id="nameInput" maxlength="24" placeholder="Your display name" required><span class="char-limit" id="nameCount">0/24</span></div>
-          <div class="form-row textarea-row"><textarea id="commentInput" maxlength="240" rows="3" placeholder="What should Bloom learn next?" required></textarea><span class="char-limit" id="commentCountInput">0/240</span></div>
-          <button class="primary-btn" type="submit">Post note <span>→</span></button>
-        </form>
+
+      <div class="community-intro">
+
+        <span class="kicker">03 / COMMUNITY</span>
+
+        <h2>Made to be played with.</h2>
+
+        <p>
+          Leave a thought, request the next filter, or tell us what you want
+          to see grow.
+        </p>
+
+        <div class="community-count">
+
+          <b id="commentCount">0</b>
+
+          <span>notes in this browser</span>
+
+        </div>
+
       </div>
+
+
+      <div class="comments-panel">
+
+        <div
+          class="comment-feed"
+          id="commentFeed"
+        ></div>
+
+
+        <form
+          id="commentForm"
+          class="comment-form"
+        >
+
+          <div class="form-row">
+
+            <input
+              id="nameInput"
+              maxlength="24"
+              placeholder="Your display name"
+              required
+            >
+
+            <span
+              class="char-limit"
+              id="nameCount"
+            >
+              0/24
+            </span>
+
+          </div>
+
+
+          <div class="form-row textarea-row">
+
+            <textarea
+              id="commentInput"
+              maxlength="240"
+              rows="3"
+              placeholder="What should Bloom learn next?"
+              required
+            ></textarea>
+
+            <span
+              class="char-limit"
+              id="commentCountInput"
+            >
+              0/240
+            </span>
+
+          </div>
+
+
+          <button
+            class="primary-btn"
+            type="submit"
+          >
+            Post note <span>→</span>
+          </button>
+
+        </form>
+
+      </div>
+
     </section>
 
+
+    <!-- ABOUT -->
     <section id="about" class="section about-section">
-      <div><span class="kicker">04 / THE IDEA</span><h2>A creative AR playground<br><em>that keeps growing.</em></h2></div>
-      <div class="about-copy"><p>Bloom AR separates camera tracking, gestures, rendering, effects and interface logic. That means the next filter can be built as an experience—not as another rewrite of the whole app.</p><div class="roadmap"><span><b>01</b> Bloom</span><span><b>02</b> Galaxy</span><span><b>03</b> Pulse</span><span><b>04</b> Your idea</span></div></div>
+
+      <div>
+
+        <span class="kicker">04 / THE IDEA</span>
+
+        <h2>
+          A creative AR playground<br>
+          <em>that keeps growing.</em>
+        </h2>
+
+      </div>
+
+
+      <div class="about-copy">
+
+        <p>
+          Bloom AR separates camera tracking, gestures, rendering, effects
+          and interface logic. That means the next filter can be built as an
+          experience—not as another rewrite of the whole app.
+        </p>
+
+
+        <div class="roadmap">
+
+          <span>
+            <b>01</b> Bloom
+          </span>
+
+          <span>
+            <b>02</b> Galaxy
+          </span>
+
+          <span>
+            <b>03</b> Pulse
+          </span>
+
+          <span>
+            <b>04</b> Your idea
+          </span>
+
+        </div>
+
+      </div>
+
     </section>
+
   </main>
 
-  <footer><div class="brand"><span class="brand-mark">✦</span><span>Bloom<span class="brand-muted">AR</span></span></div><span>Creative browser AR / v1.0</span><a href="#home">Back to top ↑</a></footer>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <div class="capture-modal" id="captureModal" hidden><div class="capture-backdrop"></div><div class="capture-card"><button class="modal-close" id="closeCapture">×</button><span class="kicker">CAPTURE</span><h3>Your Bloom</h3><img id="captureImage" alt="Captured Bloom AR frame"><div class="modal-actions"><a class="primary-btn" id="downloadCapture" download="bloom-ar.png">Save image <span>↓</span></a><button class="ghost-btn" id="closeCapture2">Back to studio</button></div></div></div>
+  <!-- FOOTER -->
+  <footer>
 
+    <div class="brand">
+
+      <span class="brand-mark">✦</span>
+
+      <span>
+        Bloom<span class="brand-muted">AR</span>
+      </span>
+
+    </div>
+
+    <span>
+      Creative browser AR / v1.0
+    </span>
+
+    <a href="#home">
+      Back to top ↑
+    </a>
+
+  </footer>
+
+
+  <!-- TOAST -->
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+
+  <!-- CAPTURE MODAL -->
+  <div
+    class="capture-modal"
+    id="captureModal"
+    hidden
+  >
+
+    <div class="capture-backdrop"></div>
+
+
+    <div class="capture-card">
+
+      <button
+        class="modal-close"
+        id="closeCapture"
+      >
+        ×
+      </button>
+
+      <span class="kicker">
+        CAPTURE
+      </span>
+
+      <h3>Your Bloom</h3>
+
+
+      <img
+        id="captureImage"
+        alt="Captured Bloom AR frame"
+      >
+
+
+      <div class="modal-actions">
+
+        <a
+          class="primary-btn"
+          id="downloadCapture"
+          download="bloom-ar.png"
+        >
+          Save image <span>↓</span>
+        </a>
+
+        <button
+          class="ghost-btn"
+          id="closeCapture2"
+        >
+          Back to studio
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- MEDIAPIPE -->
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
-  <script type="module" src="js/app.js"></script>
+
+
+  <!-- APP -->
+  <script
+    type="module"
+    src="js/app.js"
+  ></script>
+
 </body>
 </html>

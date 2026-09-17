@@ -3,6 +3,9 @@ import {GestureEngine} from "./gesture-engine.js";
 import {EffectManager} from "./effect-manager.js";
 import {BloomEffect} from "./effects/bloom-effect.js";
 import {UI} from "./ui.js";
+import { GalaxyEffect } from "./effects/galaxy-effect.js";
+import { PulseEffect } from "./effects/pulse-effect.js";
+import { ButterflyEffect } from "./effects/butterfly-effect.js";
 
 class BloomARApp {
   constructor(){
@@ -13,7 +16,11 @@ class BloomARApp {
     this.commentsKey="bloom-ar-comments-v1";
     this.apiBase="/api";
     this.comments=[];
-    this.ui.initInteractions(this);this.effects.register("bloom",new BloomEffect());
+    this.ui.initInteractions(this);
+    this.effects.register("bloom", new BloomEffect());
+    this.effects.register("galaxy", new GalaxyEffect());
+    this.effects.register("pulse", new PulseEffect());
+    this.effects.register("butterfly", new ButterflyEffect());
     this.renderComments();this.ui.cameraEmpty(true);
     this.loadComments();
   }
